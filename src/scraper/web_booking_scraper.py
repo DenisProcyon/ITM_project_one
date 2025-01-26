@@ -136,7 +136,7 @@ class SelBookingScraper:
 
     def load_all_page(self):
         i = 0
-        while i < 10: # TODO: we can make it while True but it will take fucking forever in current implementation
+        while i < 2: # TODO: we can make it while True but it will take fucking forever in current implementation
             try:
                 for _ in range(3):
                     self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
