@@ -6,9 +6,9 @@ from pathlib import Path
 from scraper.web_booking_scraper import SelBookingScraper
 from scraper.html_booking_scraper import AsyncHTMLBookingScraper
 
-CITY = "Barcelona"
-START = "1 February 2025"
-END = "5 February 2025"
+CITY = "Lisbon"
+START = "19 September 2025"
+END = "26 September 2025"
 
 async def main_async():
     # empty list to save hotel data

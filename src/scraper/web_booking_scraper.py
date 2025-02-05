@@ -200,7 +200,6 @@ class SelBookingScraper:
         """
         Scrolls the page till not fully loaded to load alll the elemnts to be present in html code 
         """
-        i = 0
         while True:
             try:
                 for _ in range(3):
@@ -209,7 +208,6 @@ class SelBookingScraper:
                     sleep(1)
 
                 load_more_button = self.__find_element(Selectors.LOAD_MORE_BUTTON)
-                i += 1
             except Exception as e:
                 print(f'Page loaded')
                 break

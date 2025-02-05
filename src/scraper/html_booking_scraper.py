@@ -70,7 +70,7 @@ class AsyncHTMLBookingScraper:
 
         try:
             rating = float(rating_data[0].text.split()[-1])
-            reviews = float(rating_data[-1].text.split()[0].replace(",", "."))
+            reviews = int(rating_data[-1].text.split()[0].replace(",", ""))
 
             return rating, reviews
         except (ValueError, IndexError):
@@ -85,7 +85,7 @@ class AsyncHTMLBookingScraper:
             return 0.0
 
         price_str = price_tag.text
-        parsed_price = (price_str.replace("\n€\xa0", "").replace("\n", "").replace(",", "."))
+        parsed_price = (price_str.replace("\n€\xa0", "").replace("\n", "").replace(",", ""))
         try:
             return float(parsed_price)
         except ValueError:
